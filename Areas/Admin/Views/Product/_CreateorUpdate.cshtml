@@ -1,0 +1,32 @@
+﻿@model Models.ProductModel
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home">اطلاعات محصول</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1">تصاویر</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2">محصولات مرتبط</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu3">فعالیت ها </a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane container active" id="home">
+        @Html.Partial("_CreateorUpdate.TabInfo.cshtml", Model)
+    </div>
+    <div class="tab-pane container fade" id="menu1">
+        @Html.Partial("_CreateorUpdate.ProductPictures.cshtml", Model)
+    </div>
+    <div class="tab-pane container fade" id="menu2">
+        @Html.Partial("_CreateorUpdate.RelatedProduct.cshtml", Model)
+
+    </div>
+    <div class="tab-pane container fade" id="menu3">...</div>
+</div>
